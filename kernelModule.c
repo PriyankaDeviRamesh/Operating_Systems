@@ -1,8 +1,8 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<fcntl.h>
-#define N 8
-#define MAX_LENGTH 100
+#define N 5
+#define MAX_LENGTH 500
 struct timeval gtodTimes[N];
 int main()
 {
