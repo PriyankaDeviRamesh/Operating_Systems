@@ -1,11 +1,6 @@
-Operating Systems          10/12/2017
+From the three timings, getnstimeofday has better precision than both other functions
 
-Files : mysyscall.c (User Application)
-        my_xtime.c
+change the module so that init_module() returns -1, recompile, and retest. What happens? Why?
 
-To compile : gcc mysyscall.c
-             gcc my_xtime.c
-
-To Run : ./a.out
-
+  returning -1, crashes the module.
 
