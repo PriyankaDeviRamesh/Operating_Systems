@@ -1,6 +1,8 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<fcntl.h>
+#include<sys/time.h>
+#include<unistd.h>
 #define N 5
 #define MAX_LENGTH 500
 struct timeval gtodTimes[N];
@@ -17,7 +19,7 @@ int fd = open("/dev/mytimechar", O_RDONLY);
 for( i=0; i < N; i++)
 {
 	 gettimeofday(&gtodTimes[i], 0);
-        size_t bytes_read = read(fd, procClockTimes[i], sizeof(procClockTimes[i]));
+         int bytes_read = read(fd, procClockTimes[i], MAX_LENGTH);
 	/* check for errors HERE */
 }
 
